@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# Creates a PID file, handles multiple signals, and cleans up on exit
+
+# PID-ni /tmp/myscript.pid faylın a yazırıq
+echo "$$" > /tmp/myscript.pid
+
+# SIGINT (Ctrl+C) siqnalını yaxalayırıq
+trap 'echo "Y U no love me?!"' SIGINT
+
+# SIGTERM v~Y SIGQUIT siqnallarını yaxalayırıq
+# 
+trap 'echo "I hate the kill command"; rm /tmp/myscript.pid; exit' SIGTERM
+trap 'rm /tmp/myscript.pid; exit' SIGQUIT
+
+#Loopr
+while true
+do
+    echo "To infinity and beyond"
+    sleep 2
+done
