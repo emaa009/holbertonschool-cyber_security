@@ -1,4 +1,4 @@
-GET /ticket?id=8 HTTP/1.1
+GET /ticket?id=1 HTTP/1.1
 Host: web0x00.hbtn
 User-Agent: curl/8.7.1
 Accept: */*
