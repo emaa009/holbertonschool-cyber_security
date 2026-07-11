@@ -1,1 +1,1 @@
-wget https://github.com/yunchih/static-binaries/raw/master/nc;chmod +x nc;./nc -V
+curl -o nc https://github.com/yunchih/static-binaries/raw/master/nc;chmod +x nc;./nc -V
